@@ -10,25 +10,26 @@ async function clickDownloadButtons() {
 
         let font = buttons[i]
         font.click();
-        await delay(500); // wait for the modal to appear
+        let rand = Math.random() * 1000;
+        await delay(rand + 300); // wait for the modal to appear
         let modalUp = document.querySelector('.ReactModalPortal');
         console.log(`🚀 ~ file: envato-fonts-download.js:15 ~ modalUp:`, modalUp)
         let targetSpan = document.querySelector('.ReactModalPortal form span');
         if (!targetSpan) {
             console.log(`🚀 ~ file: envato-fonts-download.js:17 ~ targetSpan:`, targetSpan)
-            await delay(500)
+            await delay(rand + 300)
         }
         if (!targetSpan) {
             console.log(`🚀 ~ file: envato-fonts-download.js:21 ~ targetSpan:`, targetSpan)
-            await delay(500)
+            await delay(rand + 300)
         }
         if (!targetSpan) {
             console.log(`🚀 ~ file: envato-fonts-download.js:25 ~ targetSpan:`, targetSpan)
-            await delay(500)
+            await delay(rand + 300)
         }
         if (!targetSpan) {
             console.log(`🚀 ~ file: envato-fonts-download.js:29 ~ targetSpan:`, targetSpan)
-            await delay(500)
+            await delay(rand + 300)
         }
         let textContent = targetSpan.textContent;
         console.log(textContent); // Should print the text content of that specific span
@@ -38,7 +39,7 @@ async function clickDownloadButtons() {
 
         let downloadButton = document.querySelector('button[data-test-selector="project-add-and-download-button"]');
         downloadButton.click();
-        await delay(500); // wait for the download action to complete
+        await delay(rand + 300); // wait for the download action to complete
 
         let closeModal = document.querySelector('button[data-test-selector="download-modal-close-button"]');
         if (closeModal) {
